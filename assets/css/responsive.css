@@ -1,0 +1,66 @@
+/* Responsive Page Film Detail*/
+
+@media screen and (max-width: 1160px) {
+    body {
+        width: 100%;
+    }
+    .film-detail .row {
+        flex-wrap: wrap;
+    }
+
+    .film-detail .film-block {
+        width: 100%;
+    }
+
+    .film-detail .row .related-film {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .film-block {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .film-block .avatar {
+        width: 100%;
+    }
+
+    .film-info {
+        padding: 10px 0;
+    }
+
+    .film-detail .film-desc {
+        width: 100%;
+    }
+
+    .footer .row ul,
+    .film-detail .row-top {
+        flex-wrap: wrap;
+    }
+
+    .film-detail .row .related-film {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    .film-info .cta {
+        justify-content: center;
+    }
+
+    .film-info .cta .btn{
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .film-info .cta .btn-watch {
+        margin-top: 10px;
+    }
+}

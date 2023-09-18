@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* -------------- Common -------------- */
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 1100px;
+    max-width: calc(100% - 50px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------- Navbar -------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    /* background-color: #333; */
+    background-color: #ff3cac;
+    background-image: linear-gradient(
+        225deg,
+        #ff3cac 0%,
+        #784ba0 50%,
+        #2b86c5 100%
+    );
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .menu a {
+    display: inline-block;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+.navbar .menu a:hover {
+    /* background-color: #666; */
+    background-color: #4158d0;
+    background-image: linear-gradient(
+        43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%
+    );
+}
+
+/* -------------- Film -------------- */
+
+.film {
+    padding: 30px 0;
+    background-image: url("https://starlight.vn/Content/img/bgs6.jpg");
+}
+
+.film .list-film {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.film .title {
+    position: relative;
+    padding-bottom: 12px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #eee;
+}
+
+.film .title::before {
+    position: absolute;
+    content: "";
+    top: -7px;
+    left: 0;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.film .film-item {
+    position: relative;
+    width: 200px;
+    min-height: 350px;
+    border: 1px solid #ccc;
+    background-color: #222;
+}
+
+.film .film-item::before {
+    position: absolute;
+    content: "Full HD";
+    display: inline-block;
+    top: 10px;
+    left: -16px;
+    background-color: #f86d08;
+    padding: 6px 10px;
+    border-radius: 5px 10px;
+    color: #ededed;
+    z-index: 2;
+}
+
+.film .thumnail {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.film .film-item .avatar {
+    width: 99%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+.film .film-item .avatar:hover {
+    transform: scale(1.2);
+}
+
+.film .film-item h3 {
+    padding: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #eee;
+}
+
+/* -------------- Footer -------------- */
+.footer {
+    padding: 30px 0;
+    background-image: url("https://media.istockphoto.com/id/1220981813/photo/black-stone-background-dark-gray-banner-with-concrete-wall-surface-texture.jpg?s=170667a&w=0&k=20&c=DheopxeStCGEU1eqIh51V9VVJIE2i5Cx9ii5_aK1Tms=");
+}
+
+.footer .row ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer .row-top a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.footer .row-bottom p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ccc;
+    font-style: italic;
+}
+
+/* -------------- Film Detail-------------- */
+
+.film-detail {
+    background-image: url("https://st4.depositphotos.com/2777985/22441/i/450/depositphotos_224411584-stock-photo-black-wall-texture-background-banner.jpg");
+}
+
+.film-detail .film-block {
+    width: 70%;
+}
+
+.film-detail .promotion img {
+    width: 100%;
+}
+
+.film-detail .row {
+    display: flex;
+}
+
+.film-detail .row-top,
+.film-detail .related-film {
+    display: flex;
+    margin: 12px;
+    padding: 12px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.film-detail .film-info {
+    margin-left: 14px;
+}
+
+.film-detail .film-info .avatar {
+    width: 200px;
+    height: 250px;
+}
+
+.film-detail .film-info .sub-title {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fbc531;
+}
+
+.film-detail .film-info p {
+    margin-top: 2px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #718093;
+}
+
+.film-detail .film-info p span {
+    color: #c8d6e5;
+}
+
+.film-detail .film-info .cta {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.film-detail .film-info .btn {
+    min-width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #ededed;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.film-detail .film-info .btn-trailer {
+    background-color: #25ccf7;
+}
+
+.film-detail .film-info .btn-trailer:hover {
+    background-color: #fff;
+    color: #25ccf7;
+    border: 1px solid #25ccf7;
+}
+
+.film-detail .film-info .btn-watch {
+    margin-left: 5px;
+    background-color: #eb2f06;
+    color: #ededed;
+}
+
+.film-detail .film-info .btn-watch:hover {
+    background-color: #fff;
+    color: #eb2f06;
+    border: 1px solid #eb2f06;
+}
+
+.film-detail .film-info .icon + .icon {
+    margin-left: 5px;
+}
+
+.film-detail .film-info .share {
+    margin-top: 10px;
+}
+
+.film-detail .film-info .share span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.film-detail .film-info .star {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.film-detail .film-desc {
+    margin: 12px;
+    padding: 12px;
+    width: 100%;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.film-detail .film-desc .sub-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fffa65;
+}
+
+.film-detail .film-desc p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.film-detail .related-film {
+    display: block;
+    width: 30%;
+}
+
+.film-detail .related-film .sub-title {
+    margin-top: 3px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #95a5a6;
+}
+
+.film-detail .related-film .item h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #bdc3c7;
+}
+
+.film-detail .related-film .item p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #95a5a6;
+}
+
+.film-detail .related-film .seperate {
+    margin-top: 4px;
+    width: 100%;
+    height: 1px;
+    border-radius: 5px;
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+.film-detail .related-film .list {
+    margin-top: 10px;
+}
+
+.film-detail .related-film .item {
+    padding: 3px;
+}
+
+.film-detail .related-film .item:hover {
+    background-color: #333;
+    transition: 0.5s;
+}
+
+.film-detail .related-film .item + .item {
+    margin-top: 4px;
+}
+
+.film-detail .related-film .item a {
+    display: flex;
+}
+
+.film-detail .related-film .item img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #666;
+}
+
+.film-detail .related-film .item .info {
+    margin-left: 10px;
+}
